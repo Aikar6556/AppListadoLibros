@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,59 +9,79 @@
     android:gravity="center"
     >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            >
-
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/ivPortada"
+            android:layout_width="200dp"
+            android:layout_height="205dp"
             android:layout_gravity="center"
 
-            />
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:id="@+id/tvTitulo"
+            android:layout_width="277dp"
+            android:layout_height="38dp"
             android:layout_gravity="center"
 
 
-            />
+            android:layout_marginTop="56dp"
+            android:text="Titulo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.522"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPortada" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:id="@+id/tvNpaginas"
+            android:layout_width="291dp"
+            android:layout_height="27dp"
             android:layout_gravity="center"
 
-            />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"
-
-            />
+            android:layout_marginTop="16dp"
+            android:text="Npaginas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Button"
+            android:layout_marginBottom="68dp"
+            android:onClick="volver"
 
-            />
-        </LinearLayout>
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
-</LinearLayout>
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="277dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNpaginas">
+
+                <TextView
+                    android:id="@+id/tvDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:text="Description" />
+        </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

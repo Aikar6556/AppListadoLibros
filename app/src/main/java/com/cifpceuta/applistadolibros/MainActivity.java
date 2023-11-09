@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
                 boton(view,position);
 
-
                 Libro libro = (Libro) adapterLibros.getItem(position);
                 Toast.makeText(view.getContext(), "Libro consultado: "+libro.getTitulo(),Toast.LENGTH_SHORT).show();
             }
@@ -61,7 +60,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("titulo",adapterLibros.getItem(numero).getTitulo());
         intent.putExtra("descripcion",adapterLibros.getItem(numero).getDescription());
         intent.putExtra("nPaginas",adapterLibros.getItem(numero).getPaginas());
+        startActivity(intent);
 
     }
+
+
 
 }
